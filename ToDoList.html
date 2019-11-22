@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #but
+    {
+      background-color: #4CAF50;
+  color: white;
+  padding: 5px 16px;
+  text-align: center;
+ border:2px solid green;
+  font-size: 16px;
+
+    }
+    #list
+    {
+      background-color:#c2f9b7;
+      color:black;
+      border:2px solid black;
+      width:200px;
+    }
+  </style>
+</head>
+<body>
+ Enter details:&nbsp<input type="text" id="t" placeholder="Write Something">
+  <button onclick="fnc()" id="but">Submit</button>
+  <div id="list">
+
+  </div>
+
+<script>
+  function fnc()
+  {
+    var x = document.getElementById("t").value;
+    var para = document.createElement("p");
+var node = document.createTextNode(x);
+para.appendChild(node);
+var element = document.getElementById("list");
+element.appendChild(para);
+var para = document.createElement("button");
+var node = document.createTextNode("delete");
+
+para.appendChild(node);
+element.appendChild(para);
+  }
+</script>
+</body>
+</html>
